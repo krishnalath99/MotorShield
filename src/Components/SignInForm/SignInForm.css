@@ -1,0 +1,42 @@
+.cont {
+    max-width: 360px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 40px 20px;
+    background-color: rgba(0, 23, 42, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signin-form {
+    text-align: center;
+}
+  
+.signin-form h2 {
+    margin-bottom: 20px;
+    color: #ffff;
+}
+
+.signin-form input {
+    width: 100%;
+    padding: 10px;
+    background: #EBECFE;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffff;
+}
+  
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+  
+.signup-link a:hover {
+    text-decoration: underline;
+}
