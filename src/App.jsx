@@ -6,6 +6,7 @@ import SignInForm from './Components/SignInForm/SignInForm';
 import Menu from './Components/Menu/Menu';
 import PolicyMenu from './Components/Menu/PolicyMenu';
 import ClaimMenu from './Components/Menu/ClaimMenu';
+import SignUpForm from './Components/SignUpForm/SignUpForm';
 
 
 const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index:true,
         element: <HeroHome />
+      },
+      {
+        path: '/signup',
+        element: <SignUpForm />
       },
       {
         path:'/login',

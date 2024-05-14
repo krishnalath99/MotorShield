@@ -3,6 +3,7 @@ import './SignInForm.css'
 import axios from "axios"
 import { useNavigate } from 'react-router';
 import signin_image from '../../assets/signin_image.jpg'
+import { Link } from 'react-router-dom';
 
 const SignInForm = () => {
 
@@ -49,7 +50,7 @@ const SignInForm = () => {
           <button type="submit" className='btn light-btn'>Sign In</button>
         </form>
         <p className="forgot-password-link"><a href="#">Forgot Password?</a></p>
-        <p className="signup-link">Don't have an account? <a href="#">Sign Up</a></p>
+        <p className="signup-link">Don't have an account? <Link to="/signup">Sign Up</Link></p>
       </div>
     </div>
   )
