@@ -15,7 +15,7 @@ const Contact = () => {
         setResult("Sending....");
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "bea77da9-0e34-4dac-a6b5-d944b17bf7d5");
+        formData.append("access_key", "f6b0f892-3827-4268-bcaf-565da5e3226f");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -39,7 +39,7 @@ const Contact = () => {
             <h3>Send us a message <img src={msg_icon} alt="" /></h3>
             <p>Feel free to reach us out through contact form or find our contact information below. Your, feedback, questions, and suggestions are important to us as we strive to provide exceptional service to our customers.</p>
             <ul>
-                <li><img src={mail_icon} alt="" />contact@MotorShield.com</li>
+                <li><img src={mail_icon} alt="" />motorshield99@gmail.com</li>
                 <li><img src={phone_icon} alt="" />+91 987-654-3210</li>
                 <li><img src={location_icon} alt="" />45 Street No. 3, Krishna Nagar, Shahadara<br/> New Delhi, Delhi 110051, India</li>
             </ul>
