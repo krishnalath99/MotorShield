@@ -9,7 +9,7 @@ const HeroHome = () => {
       <div className="hero-text">
         <h1>Driving Confidence, Securing Your Every Mile.</h1>
         <p>Our commitment to excellence drives every aspect of our service, ensuring your satisfaction and peace of mind at Motor Shield.</p>
-        <Link className='btn' to="/login">Get Quotes<img src={dark_arrow} alt="" /></Link>
+        <Link className='btn' to="/login">SignIn to Get Quotes<img src={dark_arrow} alt="" /></Link>
       </div>
   )
 }

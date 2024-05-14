@@ -1,31 +1,38 @@
 import React from 'react'
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
-import RootLayout from './Pages/RootLayout';
 import HeroHome from './Components/Hero/HeroHome';
 import MainPage from './Components/MainPage/MainPage';
 import SignInForm from './Components/SignInForm/SignInForm';
+import Menu from './Components/Menu/Menu';
+import PolicyMenu from './Components/Menu/PolicyMenu';
+import ClaimMenu from './Components/Menu/ClaimMenu';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <RootLayout />,
+    element: <MainPage />,
     children: [
       {
-        path: '/',
-        element: <MainPage />,
-        children: [
-          {
-            index:true,
-            element: <HeroHome />
-          },
-          {
-            path:'/login',
-            element: <SignInForm />
-          }
-        ]
+        index:true,
+        element: <HeroHome />
+      },
+      {
+        path:'/login',
+        element: <SignInForm />
+      },
+      {
+        path: '/menu',
+        element: <Menu />
+      },
+      {
+        path: '/policy-menu',
+        element: <PolicyMenu />
+      },
+      {
+        path: '/claim-menu',
+        element: <ClaimMenu />
       }
-
     ]
   }
 ])

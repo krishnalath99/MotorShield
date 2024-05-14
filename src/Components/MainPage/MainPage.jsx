@@ -7,7 +7,6 @@ import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import { Outlet } from "react-router";
-import { Link } from "react-router-dom";
 
 
 const MainPage = () => {
