@@ -1,4 +1,4 @@
-.cont {
+.conta {
     max-width: 720px;
     margin: 0 auto;
     margin-top: 80px;
@@ -9,7 +9,7 @@
     display: flex;
 }
 
-.image-container {
+.img-container {
     flex: 1;
     display: flex;
     align-items: center;
@@ -66,4 +66,15 @@
 .signup-link a:hover, .forgot-password-link a:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+
+/* -------Media Queries--------- */
+@media (max-width: 700px) {
+    .img-container {
+        display: none;
+    }
+    .conta {
+        max-width: 360px;
+    }
 }

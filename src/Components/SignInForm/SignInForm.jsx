@@ -37,8 +37,8 @@ const SignInForm = () => {
   }
 
   return (
-    <div className='cont'>
-      <div className="image-container">
+    <div className='conta'>
+      <div className="img-container">
         <img src={signin_image} className="signin-image"/>
       </div>
       <div className="form-container">

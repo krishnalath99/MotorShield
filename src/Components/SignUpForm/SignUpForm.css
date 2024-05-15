@@ -52,14 +52,10 @@
     margin-bottom: 10px;
 }
 
-.tandc {
-    display: flex;
-    vertical-align: middle;
-}
-
 .tandc input[type="checkbox"] {
-    display: inline-block;
-    margin-left: 5px; /* Adjust the spacing between the checkbox and the label */
+    display: inline;
+    width: 30px;
+    margin-bottom: 5px;
 }
 
 .signin-link {
@@ -75,4 +71,14 @@
   
 .signin-link a:hover {
     text-decoration: underline;
+}
+
+
+@media (max-width: 700px) {
+    .image-container {
+        display: none;
+    }
+    .cont {
+        max-width: 360px;
+    }
 }
