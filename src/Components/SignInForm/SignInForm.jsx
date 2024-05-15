@@ -48,7 +48,7 @@ const SignInForm = () => {
           {error && <p className="error-message">{error}</p>}
           <button type="submit" className='btn light-btn'>Sign In</button>
         </form>
-        <p className="forgot-password-link"><a href="#">Forgot Password?</a></p>
+        <p className="forgot-password-link"><Link to='/send-reset-password-email'>Forgot Password?</Link></p>
         <p className="signup-link">Don't have an account? <Link to="/signup">Sign Up</Link></p>
       </div>
     </div>

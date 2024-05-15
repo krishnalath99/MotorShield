@@ -9,6 +9,9 @@ import ClaimMenu from './Components/Menu/ClaimMenu';
 import SignUpForm from './Components/SignUpForm/SignUpForm';
 import ProtectedRoutePage from './Components/ProtectedRoutePage';
 import SignOut from './Components/SignOut/SignOut';
+import VehicleDetails from './Components/PolicySubMenu/VehicleDetails';
+import ForgorPassword from './Components/ForgotPassoword/ForgorPassword';
+import ResetPassword from './Components/ResetPassword/ResetPassword';
 
 
 const router = createBrowserRouter([
@@ -33,6 +36,15 @@ const router = createBrowserRouter([
         element: <SignOut />
       },
       {
+        path: '/send-reset-password-email',
+        element: <ForgorPassword />
+      },
+      {
+        path: '/reset-password/:uid/:token',
+        element: <ResetPassword />
+
+      },
+      {
         path: '/menu',
         element: (
           <ProtectedRoutePage>
@@ -55,6 +67,14 @@ const router = createBrowserRouter([
             <ClaimMenu />
           </ProtectedRoutePage>
         ),
+      },
+      {
+        path: '/add-vehicle',
+        element: (
+          <ProtectedRoutePage>
+            <VehicleDetails />
+          </ProtectedRoutePage>
+        )
       }
     ]
   }
