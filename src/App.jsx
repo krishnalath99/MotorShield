@@ -12,6 +12,8 @@ import SignOut from './Components/SignOut/SignOut';
 import VehicleDetails from './Components/PolicySubMenu/VehicleDetails';
 import ForgorPassword from './Components/ForgotPassoword/ForgorPassword';
 import ResetPassword from './Components/ResetPassword/ResetPassword';
+import AddOnDetails from './Components/PolicySubMenu/AddOnDetails';
+import ProposalFiled from './Components/PolicySubMenu/ProposalFiled';
 
 
 const router = createBrowserRouter([
@@ -73,6 +75,22 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoutePage>
             <VehicleDetails />
+          </ProtectedRoutePage>
+        )
+      },
+      {
+        path: '/addOns-details',
+        element : (
+          <ProtectedRoutePage>
+            <AddOnDetails />
+          </ProtectedRoutePage>
+        )
+      },
+      {
+        path: '/proposal-filed',
+        element: (
+          <ProtectedRoutePage>
+            <ProposalFiled />
           </ProtectedRoutePage>
         )
       }

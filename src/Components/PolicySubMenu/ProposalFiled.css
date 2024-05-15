@@ -1,0 +1,13 @@
+.proposal-message-page {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 40px 20px;
+  background-color: rgba(0, 23, 42, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.proposal-message {
+  text-align: center;
+}

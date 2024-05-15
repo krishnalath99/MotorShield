@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './ForgotPassword.css'
+import { useNavigate } from 'react-router-dom'
 
 const ForgorPassword = () => {
 
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (localStorage.getItem("token")){
+        navigate('/menu')
+      }
+  },[])
   
   const submitHandler = async (event) => {
     event.preventDefault();
