@@ -7,6 +7,8 @@ import Menu from './Components/Menu/Menu';
 import PolicyMenu from './Components/Menu/PolicyMenu';
 import ClaimMenu from './Components/Menu/ClaimMenu';
 import SignUpForm from './Components/SignUpForm/SignUpForm';
+import ProtectedRoutePage from './Components/ProtectedRoutePage';
+import SignOut from './Components/SignOut/SignOut';
 
 
 const router = createBrowserRouter([
@@ -27,16 +29,32 @@ const router = createBrowserRouter([
         element: <SignInForm />
       },
       {
+        path: '/signout',
+        element: <SignOut />
+      },
+      {
         path: '/menu',
-        element: <Menu />
+        element: (
+          <ProtectedRoutePage>
+            <Menu />
+          </ProtectedRoutePage>
+        ),
       },
       {
         path: '/policy-menu',
-        element: <PolicyMenu />
+        element: (
+          <ProtectedRoutePage>
+            <PolicyMenu />
+          </ProtectedRoutePage>
+        ),
       },
       {
         path: '/claim-menu',
-        element: <ClaimMenu />
+        element: (
+          <ProtectedRoutePage>
+            <ClaimMenu />
+          </ProtectedRoutePage>
+        ),
       }
     ]
   }

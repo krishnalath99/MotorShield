@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './SignInForm.css'
 import axios from "axios"
-import { useNavigate } from 'react-router';
 import signin_image from '../../assets/signin_image.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SignInForm = () => {
 

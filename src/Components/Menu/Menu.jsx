@@ -1,17 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Menu.css'
-import { Link, redirect, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
-
-
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if (!localStorage.getItem("token")){
-        navigate('/')
-      }
-  },[])
   
 
   return (
