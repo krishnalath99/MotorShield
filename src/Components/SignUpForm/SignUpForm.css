@@ -65,12 +65,16 @@
 }
   
 .signin-link a {
-    color: #007bff;
+    color: #cccc;
     text-decoration: none;
 }
   
 .signin-link a:hover {
     text-decoration: underline;
+}
+
+.tandc-container {
+    margin-bottom: 25px;
 }
 
 

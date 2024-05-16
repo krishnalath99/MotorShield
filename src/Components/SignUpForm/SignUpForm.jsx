@@ -62,8 +62,10 @@ const SignUpForm = () => {
           <input type="password" id="password" name="password" placeholder='Enter Your Password' required value={password} onChange={(event) => setPassword(event.target.value)}/>
           <input type="password" id="password2" name="password2" placeholder='Confirm Your Password' required value={password2} onChange={(event) => setPassword2(event.target.value)}/>
           {error && <p className="error-message">{error}</p>}
-          <label className='tandc'>
-          <input type="checkbox" className='tnc' id="tc" name="tc" checked={tc} onChange={(event) => setTc(event.target.checked)}/>I accept the terms and conditions</label>
+          <div className="tandc-container">
+            <label className='tandc'>
+            <input type="checkbox" className='tnc' id="tc" name="tc" checked={tc} onChange={(event) => setTc(event.target.checked)}/>I accept the terms and conditions</label>
+          </div>
           <button type="submit" className='btn light-btn'>Sign Up</button>
           
         </form>

@@ -15,7 +15,7 @@ const ProposalFiled = () => {
             <br/>
             <p>Click here to track the policy</p>
             <br/>
-            <Link to='/' className='btn light-btn'>Track Policy</Link>
+            <Link to='/track-policy' className='btn light-btn'>Track Policy</Link>
           </div>
         </div>
       );

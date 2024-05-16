@@ -14,6 +14,14 @@ import ForgorPassword from './Components/ForgotPassoword/ForgorPassword';
 import ResetPassword from './Components/ResetPassword/ResetPassword';
 import AddOnDetails from './Components/PolicySubMenu/AddOnDetails';
 import ProposalFiled from './Components/PolicySubMenu/ProposalFiled';
+import RenewPolicy from './Components/PolicySubMenu/RenewPolicy';
+import TrackPolicy from './Components/PolicySubMenu/TrackPolicy';
+import PolicyStatus from './Components/PolicySubMenu/PolicyStatus';
+import PaymentCompleted from './Components/PolicySubMenu/PaymentCompleted';
+import AddClaim from './Components/ClaimSubMenu/AddClaim';
+import ClaimFiled from './Components/ClaimSubMenu/ClaimFiled';
+import TrackClaim from './Components/ClaimSubMenu/TrackClaim';
+import ClaimStatus from './Components/ClaimSubMenu/ClaimStatus';
 
 
 const router = createBrowserRouter([
@@ -91,6 +99,70 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoutePage>
             <ProposalFiled />
+          </ProtectedRoutePage>
+        )
+      },
+      {
+        path: '/renew-policy',
+        element: (
+          <ProtectedRoutePage>
+            <RenewPolicy />
+          </ProtectedRoutePage>
+        )
+      },
+      {
+        path: '/track-policy',
+        element: (
+          <ProtectedRoutePage>
+            <TrackPolicy />
+          </ProtectedRoutePage>
+        )
+      },
+      {
+        path: '/policy-status',
+        element: (
+          <ProtectedRoutePage>
+            <PolicyStatus />
+          </ProtectedRoutePage>
+        )
+      },
+      {
+        path: '/payment-completed',
+        element: (
+          <ProtectedRoutePage>
+            <PaymentCompleted />
+          </ProtectedRoutePage>
+        )
+      },
+      {
+        path: '/add-claim',
+        element: (
+          <ProtectedRoutePage>
+            <AddClaim />
+          </ProtectedRoutePage>
+        )
+      },
+      {
+        path: '/claim-filed',
+        element: (
+          <ProtectedRoutePage>
+            <ClaimFiled />
+          </ProtectedRoutePage>
+        )
+      },
+      {
+        path: '/track-claim',
+        element: (
+          <ProtectedRoutePage>
+            <TrackClaim />
+          </ProtectedRoutePage>
+        )
+      },
+      {
+        path: '/claim-status',
+        element: (
+          <ProtectedRoutePage>
+            <ClaimStatus />
           </ProtectedRoutePage>
         )
       }

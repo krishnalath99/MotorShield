@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 const ClaimMenu = () => {
   return (
     <div className="card-menu">
-      <Link className="card">File for a Claim</Link>
-      <Link className="card">Track Your Claim</Link>
+      <Link to='/add-claim' className="card">File for a Claim</Link>
+      <Link to='/track-claim' className="card">Track Your Claim</Link>
     </div>
   )
 }

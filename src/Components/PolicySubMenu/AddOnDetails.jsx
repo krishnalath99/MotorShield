@@ -8,6 +8,7 @@ const AddOnDetails = () => {
   const [personalCover, setPersonalCover] = useState(false);
   const [passengerCover, setPassengerCover] = useState(false);
   const [breakdownAssistance, setBreakdownAssistance] = useState(false);
+  const [err, setErr] = useState('')
 
   const location = useLocation()
   const navigate = useNavigate()
@@ -25,12 +26,14 @@ const AddOnDetails = () => {
             breakdown_assistance: breakdownAssistance},
             {headers:{
                 Authorization: token ? `Bearer ${token}` : null
-        }});
+            }
+        });
         console.log('Policy Creaated :', response.data)
         navigate('/proposal-filed')
     }
   catch(error) {
-    console.log(error)
+    // setErr(error.respons.data.slice[2,-2])
+    setErr(error.response.data[0])
   }
 }
   return (
@@ -74,6 +77,7 @@ const AddOnDetails = () => {
           </div>
         </div>
       </div>
+      {err && <p className="vehicle-error">{err}</p>}
       <div className="add-on-btn-container">
       <button onClick={submitHandler} className='btn light-btn'>Submit</button>
       </div>
