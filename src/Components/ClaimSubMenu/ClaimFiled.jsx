@@ -8,12 +8,12 @@ const ClaimFiled = () => {
     <div className='claim-filed-page'>
         <h2>Claimed Filed</h2>
         <br/>
-        <p>Your submission for the insurance policy proposal has been received and duly processed.</p>
+        <p>Your submission for the claim against the insurance policy has been received and duly processed.</p>
         <br/> 
-        <p>"The proposal is presently undergoing thorough review for approval. Upon successful completion of background verification, you will receive further instructions to proceed with payment for the policy."
+        <p>"The claim details are presently undergoing thorough review for approval. Upon successful verification, we will process the claim."
         </p>
         <br/>
-        <p>Click here to track the policy</p>
+        <p>Click here to track the claim</p>
         <br/>
         <Link to='/track-claim' className='btn light-btn'>Track Claim</Link>
     </div>
