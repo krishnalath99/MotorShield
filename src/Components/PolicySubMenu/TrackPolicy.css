@@ -1,5 +1,6 @@
 .track-policy-page {
-  max-width: 600px;
+  max-width: 450px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 80px;
   padding: 30px 40px;
@@ -29,6 +30,7 @@
 
 .policy-error {
   color: #f40400;
+  font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
 }
