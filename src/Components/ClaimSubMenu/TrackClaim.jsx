@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './TrackClaim.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import SingleInputForm from '../../Pages/SingleInputForm/SingleInputForm'
 
 const TrackClaim = () => {
 
@@ -9,6 +9,8 @@ const TrackClaim = () => {
   const [err, setErr] = useState('')
 
   const navigate = useNavigate()
+
+  const inputChangeHandler = (event) => setVehicleNumber(event.target.value);
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -34,14 +36,13 @@ const TrackClaim = () => {
     }
   }
   return (
-    <div className='track-claim-page'>
-      <form className="track-claim-form" onSubmit={handleSubmit}>
-        <h2>Track/View Your Claim</h2>
-        <input type="text" id="vehicle_number" name="vehicle_number" placeholder="Enter Vehicle Number" value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value)} required />
-        {err && <p className="claim-error">{err}</p>}
-        <button type="submit" className='btn light-btn'>Next</button>
-      </form>
-    </div>
+    <SingleInputForm
+      onFormSubmit={handleSubmit}
+      heading={"Track/View Your Claim"}
+      value={vehicleNumber}
+      handleInputChange={inputChangeHandler}
+      messages={err}
+      buttonName={"Next"} />
   )
 }
 

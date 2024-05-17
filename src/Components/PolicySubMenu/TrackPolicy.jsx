@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './TrackPolicy.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router'
+import SingleInputForm from '../../Pages/SingleInputForm/SingleInputForm'
 
 const TrackPolicy = () => {
 
@@ -9,6 +9,8 @@ const TrackPolicy = () => {
   const [error, setError] = useState('')
 
   const navigate = useNavigate()
+
+  const inputChangeHandler = (event) => setVehicleNumber(event.target.value)
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -34,15 +36,14 @@ const TrackPolicy = () => {
     }
   }
   return (
-    <div className='track-policy-page'>
-      <form className="track-policy-form" onSubmit={handleSubmit}>
-        <h2>Track/Pay for Policy</h2>
-        <input type="text" id="vehicle_number" name="vehicle_number" placeholder="Enter Vehicle Number" value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value)} required />
-        {error && <p className="policy-error">{error}</p>}
-        <button type="submit" className='btn light-btn'>Submit</button>
-      </form>
-    </div>
-  )
+    <SingleInputForm
+      onFormSubmit={handleSubmit}
+      heading={"Track/Pay for Policy"}
+      value={vehicleNumber}
+      handleInputChange={inputChangeHandler}
+      messages={error}
+      buttonName={"Submit"} />
+    )
 }
 
 export default TrackPolicy

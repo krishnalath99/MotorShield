@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import './RenewPolicy.css'
 import { useNavigate } from 'react-router-dom'
+import SingleInputForm from '../../Pages/SingleInputForm/SingleInputForm'
 
 const RenewPolicy = () => {
   
@@ -8,18 +8,20 @@ const RenewPolicy = () => {
 
   const navigate = useNavigate()
 
+  const inputChangeHandler = (event) => setVehicleNumber(event.target.value)
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     navigate('/addOns-details', { state: {vehicle_number: vehicleNumber}})
   } 
   return (
-    <div className='renew'>
-      <form className="renew-form" onSubmit={handleSubmit}>
-        <h2>Renew Insurance Policy</h2>
-        <input type="text" id="vehicle_number" name="vehicle_number" placeholder="Enter the Vehicle Number" value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value)} required />
-        <button type="submit" className='btn light-btn'>Next</button>
-      </form>
-    </div>
+    <SingleInputForm
+      onFormSubmit={handleSubmit}
+      heading={"Renew Insurance Policy"}
+      value={vehicleNumber}
+      handleInputChange={inputChangeHandler}
+      messages={''}
+      buttonName={"Next"} />
   )
 }
 

@@ -1,5 +1,6 @@
-.track-claim-page {
-  max-width: 600px;
+.input-page {
+  max-width: 450px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 80px;
   padding: 30px 40px;
@@ -8,17 +9,17 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.track-claim-form {
+.input-form {
   text-align: center;
 }
 
-.track-claim-form h2 {
+.input-form h2 {
   margin-top: 10px;
   margin-bottom: 30px;
   color: #fff;
 }
 
-.track-claim-form input{
+.input-form input{
   width: 100%;
   padding: 10px;
   background: #EBECFE;
@@ -27,7 +28,7 @@
   margin-bottom: 25px;
 }
 
-.claim-error {
+.disp-error {
   color: #f40400;
   font-weight: bold;
   margin-bottom: 20px;
