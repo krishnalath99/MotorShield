@@ -1,18 +1,20 @@
 import React from 'react'
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from '../context/AuthContext';
 
-const ProtectedRoutePage = (props) => {
+const ProtectedRoutePage = ({children}) => {
   
   const navigate = useNavigate()
+  const { state } = useAuth();
   
   useEffect(() => {
-    if (!localStorage.getItem("token")) {
+    if (!state.isAuthenticated) {
         navigate("/login")
     }
-  }, [])
+  }, [state.isAuthenticated, navigate])
 
-  return props.children
+  return children
 }
 
 export default ProtectedRoutePage

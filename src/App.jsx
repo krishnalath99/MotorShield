@@ -1,5 +1,6 @@
 import React from 'react'
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import { AuthProvider } from './context/AuthContext';
 import HeroHome from './Components/Hero/HeroHome';
 import MainPage from './Components/MainPage/MainPage';
 import SignInForm from './Components/SignInForm/SignInForm';
@@ -165,13 +166,17 @@ const router = createBrowserRouter([
             <ClaimStatus />
           </ProtectedRoutePage>
         )
-      }
-    ]
-  }
-])
+      },
+    ],
+  },
+]);
 
 function App() {
-  return <RouterProvider router={router}></RouterProvider>;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
+  )
 }
 
 export default App

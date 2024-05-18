@@ -19,7 +19,7 @@ const SignUpForm = () => {
     if (localStorage.getItem("token")){
       navigate('/menu')
     }
-  },[])
+  },[navigate])
 
   const handleSubmit = async (event) => {
     event.preventDefault();

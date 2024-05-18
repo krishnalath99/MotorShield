@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import './SignInForm.css'
-import axios from "axios"
-import signin_image from '../../assets/signin_image.jpg'
+import React, { useEffect, useState } from 'react';
+import './SignInForm.css';
+import axios from "axios";
+import signin_image from '../../assets/signin_image.jpg';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 const SignInForm = () => {
 
@@ -10,23 +11,24 @@ const SignInForm = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   useEffect(() => {
     if (localStorage.getItem("token")){
-        navigate('/menu')
-      }
-  },[])
+        navigate('/menu');
+    }
+  },[navigate]);
 
   const handleSignIn = async (event) => {
     event.preventDefault();
     try {
       const response = await axios.post('http://127.0.0.1:8000/login/', {
-      email,
-      password
+        email,
+        password
       });
       console.log('Login Successful:', response.data);
-      localStorage.setItem("token", response.data.token.access)
+      login(response.data.token.access);
       navigate('/menu')
     }
     catch (error) {
