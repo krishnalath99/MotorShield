@@ -4,6 +4,7 @@ import axios from "axios";
 import signin_image from '../../assets/signin_image.jpg';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import { ToastContainer, toast } from 'react-toastify';
 
 const SignInForm = () => {
 
@@ -33,6 +34,16 @@ const SignInForm = () => {
     }
     catch (error) {
       setError('Invalid Email or Password')
+      toast.error('Login Failed', {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       console.log('Login Error:',error)
     }
   }
@@ -53,6 +64,7 @@ const SignInForm = () => {
         <p className="forgot-password-link"><Link to='/send-reset-password-email'>Forgot Password?</Link></p>
         <p className="signup-link">Don't have an account? <Link to="/signup">Sign Up</Link></p>
       </div>
+      <ToastContainer />
     </div>
   )
 }

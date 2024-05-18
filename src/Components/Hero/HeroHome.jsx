@@ -17,7 +17,7 @@ const HeroHome = () => {
   useEffect(() => {
     const toastMsg = location.state?.toastMsg;
     if (toastMsg && !isToastDisplayed) {
-      toast.success(toastMsg, {
+      toast.dark(toastMsg, {
         position: "bottom-right",
         autoClose: 3000,
         hideProgressBar: false,

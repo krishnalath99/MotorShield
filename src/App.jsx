@@ -24,7 +24,6 @@ import ClaimFiled from './Components/ClaimSubMenu/ClaimFiled';
 import TrackClaim from './Components/ClaimSubMenu/TrackClaim';
 import ClaimStatus from './Components/ClaimSubMenu/ClaimStatus';
 
-
 const router = createBrowserRouter([
   {
     path: '/',
