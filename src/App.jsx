@@ -176,7 +176,7 @@ function App() {
     <AuthProvider>
       <RouterProvider router={router}></RouterProvider>
     </AuthProvider>
-  )
+  );
 }
 
 export default App

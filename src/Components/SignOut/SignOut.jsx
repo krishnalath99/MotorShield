@@ -9,7 +9,7 @@ const SignOut = () => {
 
   useEffect(() => {
     logout();
-    navigate('/')
+    navigate('/', { state: { toastMsg: 'Logged Out successfully'}})
   }, [logout, navigate]);
 
   return null;

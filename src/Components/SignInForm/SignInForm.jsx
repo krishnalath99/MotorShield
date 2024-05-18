@@ -29,7 +29,7 @@ const SignInForm = () => {
       });
       console.log('Login Successful:', response.data);
       login(response.data.token.access);
-      navigate('/menu')
+      navigate('/menu', { state: { toastMessage: 'Logged in successfully'}})
     }
     catch (error) {
       setError('Invalid Email or Password')
