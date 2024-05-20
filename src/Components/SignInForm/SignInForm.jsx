@@ -19,7 +19,22 @@ const SignInForm = () => {
     if (localStorage.getItem("token")){
         navigate('/menu');
     }
-  },[navigate]);
+    if (sessionStorage.getItem('showPasswordResetToast') && true) {
+      toast.info("Password Reset, Please Login", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      setTimeout(() => {
+        sessionStorage.removeItem('showPasswordResetToast');
+      }, 500);
+    }
+  },[]);
 
   const handleSignIn = async (event) => {
     event.preventDefault();
@@ -30,7 +45,8 @@ const SignInForm = () => {
       });
       console.log('Login Successful:', response.data);
       login(response.data.token.access);
-      navigate('/menu', { state: { toastMessage: 'Logged in successfully'}})
+      sessionStorage.setItem('showLoginToast', true);
+      navigate('/menu');
     }
     catch (error) {
       setError('Invalid Email or Password')

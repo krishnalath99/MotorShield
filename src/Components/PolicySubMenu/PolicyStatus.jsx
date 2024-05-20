@@ -33,7 +33,7 @@ const PolicyStatus = () => {
       });
       console.log(respo.data)
       console.log(response.data)
-      navigate('/payment-completed')
+      navigate('/payment-completed', { state: {policy_id: respo.data.id}})
     }
     catch(error) {
       console.log(error)

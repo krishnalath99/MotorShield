@@ -1,18 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './PaymentCompleted.css'
+import { useLocation } from 'react-router-dom';
+import MessagePage from '../../Pages/MessagePage/MessagePage';
 
 const PaymentCompleted = () => {
+
+    const location = useLocation()
+
+    const { policy_id } = location.state
+
     return (
-        <div className='proposal-message-page'>
-            <div className="proposal-message">
-            <h2>Payment has been completed</h2>
-            <br/>
-                <p>The policy has been activated and the further details related to it have been sent to your registered email.</p>
-                <br/> 
-            <Link to='/' className='btn light-btn'>Return to Dashboard</Link>
-            </div>
-        </div>
+        <MessagePage 
+          heading={"Payment Completed"}
+          firstLine={`Your Payment for the Insurance Policy ID - ${policy_id} has been received`}
+          secondLine={"The policy has been activated and the further details related to it have been sent to your registered email."}
+          thirdLine={""}
+          linkTo={'/'}
+          buttonName={"Return to Dashboard"}/>
     );
 }
 export default PaymentCompleted;

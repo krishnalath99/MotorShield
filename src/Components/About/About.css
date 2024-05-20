@@ -1,9 +1,9 @@
 .about {
-    margin: 100px auto;
+    margin: 100px 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 97%;
 }
 
 .about-left {
@@ -44,6 +44,8 @@
 .about p {
     color: #676767;
     margin-bottom: 15px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './ForgotPassword.css'
 import { useNavigate } from 'react-router-dom'
+import SingleInputForm from '../../Pages/SingleInputForm/SingleInputForm'
 
 const ForgorPassword = () => {
 
@@ -9,6 +10,8 @@ const ForgorPassword = () => {
   const [error, setError] = useState('')
 
   const navigate = useNavigate()
+
+  const inputChangeHandler = (event) => setEmail(event.target.value)
 
   useEffect(() => {
     if (localStorage.getItem("token")){
@@ -30,16 +33,16 @@ const ForgorPassword = () => {
   }
 
   return (
-    <div className="fp-cont">
-        <div className="fp-container">
-            <form className='fp-form' onSubmit={submitHandler}>
-                <h2>Forgot Password</h2>
-                <input type="email" id="email" name="email" placeholder='Enter Your Email' required value={email} onChange={(event) => setEmail(event.target.value)}/>
-                {error && <p className="error-message">{error}</p>}
-                <button type="submit" className='btn light-btn'>Get Password Reset Link on Mail</button>
-            </form>
-        </div>
-    </div>
+    <SingleInputForm
+      onFormSubmit={submitHandler}
+      heading={"Forgot Password"}
+      type={"email"}
+      id={"email"}
+      name={"email"}
+      value={email}
+      handleInputChange={inputChangeHandler}
+      messages={error}
+      buttonName={"Get Password Reset Link on Mail"} />
   )
 }
 

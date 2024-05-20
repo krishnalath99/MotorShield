@@ -19,3 +19,7 @@ const MessagePage = ({heading, firstLine, secondLine, thirdLine, linkTo, buttonN
 }
 
 export default MessagePage
+// Reused in the Following Components:
+// ProposalFiled.jsx
+// ClaimFiled.jsx
+// PaymentCompleted.jsx

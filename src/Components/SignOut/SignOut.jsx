@@ -9,7 +9,8 @@ const SignOut = () => {
 
   useEffect(() => {
     logout();
-    navigate('/', { state: { toastMsg: 'Logged Out successfully'}})
+    sessionStorage.setItem('showLogoutToast', true);
+    navigate('/');
   }, [logout, navigate]);
 
   return null;

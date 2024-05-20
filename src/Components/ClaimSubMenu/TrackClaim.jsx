@@ -39,6 +39,9 @@ const TrackClaim = () => {
     <SingleInputForm
       onFormSubmit={handleSubmit}
       heading={"Track/View Your Claim"}
+      type={"text"}
+      id={"vehicle_number"}
+      name={"vehicle_number"}
       value={vehicleNumber}
       handleInputChange={inputChangeHandler}
       messages={err}

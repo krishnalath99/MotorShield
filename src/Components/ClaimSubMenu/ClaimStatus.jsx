@@ -20,7 +20,6 @@ const ClaimStatus = () => {
         <div className= 'claim_status'>Claim Status : {claim_status}</div>
       </div>
       <Link to='/' className='btn light-btn'>Return to Home</Link>
-
   </div>
   )
 }

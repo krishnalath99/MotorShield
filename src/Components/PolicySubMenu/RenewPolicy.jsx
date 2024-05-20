@@ -18,6 +18,9 @@ const RenewPolicy = () => {
     <SingleInputForm
       onFormSubmit={handleSubmit}
       heading={"Renew Insurance Policy"}
+      type={"text"}
+      id={"vehicle_number"}
+      name={"vehicle_number"}
       value={vehicleNumber}
       handleInputChange={inputChangeHandler}
       messages={''}

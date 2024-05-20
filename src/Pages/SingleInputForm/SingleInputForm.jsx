@@ -1,15 +1,15 @@
 import React from 'react'
 import './SingleInputForm.css'
 
-const SingleInputForm = ({onFormSubmit, heading, value, handleInputChange, messages, buttonName}) => {
+const SingleInputForm = ({onFormSubmit, heading, type, id, name, value, handleInputChange, messages, buttonName}) => {
   return (
     <div className='input-page'>
       <form className="input-form" onSubmit={onFormSubmit}>
         <h2>{heading}</h2>
         <input 
-          type="text"
-          id="vehicle_number"
-          name="vehicle_number"
+          type={type}
+          id={id}
+          name={name}
           placeholder="Enter Vehicle Number"
           value={value}
           onChange={handleInputChange}
@@ -22,12 +22,9 @@ const SingleInputForm = ({onFormSubmit, heading, value, handleInputChange, messa
   )
 }
 
-SingleInputForm.defaultProps = {
-  messages: ''
-};
-
 export default SingleInputForm
 // Reused in the Following Components:
 // TrackClaim.jsx
 // TrackPolicy.jsx
 // RenewPolicy.jsx
+// ForgotPassword.jsx

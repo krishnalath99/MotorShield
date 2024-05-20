@@ -28,3 +28,20 @@
     gap: 20px;
     justify-content: center;
 }
+
+
+/* -----Media Queries----- */
+@media (max-width: 650px) {
+    .card-menu {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .card {
+        padding: 20px;
+        font-size: 20px;
+    }
+    .policy-card-menu {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

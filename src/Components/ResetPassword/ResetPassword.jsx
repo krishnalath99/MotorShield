@@ -25,6 +25,7 @@ const ResetPassword = () => {
             password2
         });
         console.log(response.data)
+        sessionStorage.setItem('showPasswordResetToast', true)
         navigate('/login')
     }
     catch(error) {

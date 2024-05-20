@@ -39,6 +39,9 @@ const TrackPolicy = () => {
     <SingleInputForm
       onFormSubmit={handleSubmit}
       heading={"Track/Pay for Policy"}
+      type={"text"}
+      id={"vehicle_number"}
+      name={"vehicle_number"}
       value={vehicleNumber}
       handleInputChange={inputChangeHandler}
       messages={error}

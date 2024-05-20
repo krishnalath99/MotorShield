@@ -31,8 +31,7 @@ const AddClaim = () => {
             Authorization: token ? `Bearer ${token}` : null
             }
         });
-        console.log(response.data)
-        navigate('/claim-filed')
+        navigate('/claim-filed', { state: {claim_id: response.data.id}})
     }
     catch(error) {
         setErr(error.response.data[0])

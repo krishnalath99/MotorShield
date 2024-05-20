@@ -28,8 +28,8 @@ const AddOnDetails = () => {
                 Authorization: token ? `Bearer ${token}` : null
             }
         });
-        console.log('Policy Creaated :', response.data)
-        navigate('/proposal-filed')
+        console.log('Policy Creaated :', response.data.id)
+        navigate('/proposal-filed', { state: {policy_id: response.data.id}})
     }
   catch(error) {
     // setErr(error.respons.data.slice[2,-2])

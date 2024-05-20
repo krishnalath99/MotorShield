@@ -1,23 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './Hero.css'
 import dark_arrow from '../../assets/dark_arrow.png'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 const HeroHome = () => {
 
-  const [isToastDisplayed, setIsToastDisplayed] = useState(false)
-
-  const location = useLocation()
-
   const { state } = useAuth();
 
   useEffect(() => {
-    const toastMsg = location.state?.toastMsg;
-    if (toastMsg && !isToastDisplayed) {
-      toast.dark(toastMsg, {
+    if (sessionStorage.getItem('showLogoutToast') && true) {
+      toast.dark("Logged Out successfully", {
         position: "bottom-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -27,9 +22,11 @@ const HeroHome = () => {
         progress: undefined,
         theme: "dark",
       });
-      setIsToastDisplayed(true);
+      setTimeout(() => {
+        sessionStorage.removeItem('showLogoutToast');
+      }, 500);
     }
-  }, [location]);
+  }, []);
 
   return (
       <div className="hero-text">
