@@ -3,6 +3,8 @@ import './Menu.css'
 import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import policy_icon from '../../assets/policy_icon.png'
+import claim_icon from '../../assets/claim_icon.png'
 
 const Menu = () => {
 
@@ -26,8 +28,21 @@ const Menu = () => {
 
   return (
     <div className="card-menu">
-      <Link to='/policy-menu' className="card">Insurance Policy</Link>
+      {/* <Link to='/policy-menu' className="card">Insurance Policy</Link>
       <Link to='/claim-menu' className="card">Claim Insurance</Link>
+      <ToastContainer /> */}
+      <Link to="/policy-menu" className="card">
+        <div className="card-content">
+          <img src={policy_icon} alt="Policy" className="main-menu-icon" />
+          <h3>Insurance Policy</h3>
+        </div>
+      </Link>
+      <Link to="/claim-menu" className="card">
+        <div className="card-content">
+          <img src={claim_icon} alt="Claim" className="main-menu-icon" />
+          <h3>Claim Insurance</h3>
+        </div>
+      </Link>
       <ToastContainer />
     </div>
   )
