@@ -23,11 +23,13 @@ import AddClaim from './Components/ClaimSubMenu/AddClaim';
 import ClaimFiled from './Components/ClaimSubMenu/ClaimFiled';
 import TrackClaim from './Components/ClaimSubMenu/TrackClaim';
 import ClaimStatus from './Components/ClaimSubMenu/ClaimStatus';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index:true,
